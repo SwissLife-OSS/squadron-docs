@@ -1,0 +1,15 @@
+{
+  "docs": {
+    "Introduction": [
+      "introduction",
+      "get-started",
+      "basic-concept"
+    ],
+    "Services": [
+      "services-overview",
+      "services-mongo",
+      "services-sqlserver",
+      "services-elasticsearch"
+    ]
+  }
+}

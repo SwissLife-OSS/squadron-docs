@@ -1,0 +1,52 @@
+.homeContainer {}
+
+.homeContainer .section.logo {
+  display: inline-block !important;
+  margin-bottom: 0%;
+}
+
+.homeContainer .section.logo>img {
+  width: 35%;
+}
+
+@media(min-width: 480px) {
+  .homeContainer .section.logo>img {
+    width: 100%;
+  }
+}
+
+@media(min-width: 736px) {
+  .homeContainer .section.logo>img {
+    width: 100%;
+  }
+}
+
+.homeContainer .projectTitle {
+  color: #fff;
+}
+
+.pluginWrapper.buttonWrapper>.button {
+  background-color: #d82034;
+  color: #fff;
+  font-size: 25px;
+  margin: 13px;
+  border: 0 none;
+  padding: 15px 32px;
+}
+
+.pluginWrapper.buttonWrapper>.button:hover {
+  background: #a11c36;
+}
+
+.mainContainer .darkBackground h2 p {
+  /*color: #fbae18;*/
+  font-size: 30px;
+}
+
+.blockImage img {
+  height: 100%;
+}
+
+.logoPosition {
+  margin: -50px;
+}
