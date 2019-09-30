@@ -16,13 +16,13 @@ This are providers for services which can run in a container. This offers full i
 ### 2. Cloud Providers
 This are providers which abstracts any cloud service. A variety of services which doesn't support containerization can be implemented as Cloud Provider.
 
-### Getting Started
+## Getting Started
 
 To get started, we have prepared examples for each service step by step.
 
 [Get Started](get-started.md)
 
-### Basic Concept
+## Basic Concept
 
 To understand who this is working and what Squadron is doing "behind the scenes", we have prepared a short description of our framework.
 

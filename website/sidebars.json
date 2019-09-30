@@ -5,11 +5,17 @@
       "get-started",
       "basic-concept"
     ],
-    "Services": [
-      "services-overview",
-      "services-mongo",
-      "services-sqlserver",
-      "services-elasticsearch"
+    "MongoDB": [
+      "mongodb-example",
+      "mongodb-api"
+    ],
+    "Elasticsearch": [
+      "elasticsearch-example",
+      "elasticsearch-api"
+    ],
+    "Sql Server": [
+      "sqlserver-example",
+      "sqlserver-api"
     ]
   }
 }
