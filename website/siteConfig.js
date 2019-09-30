@@ -19,7 +19,7 @@ const blogUrl = organizationUrl + "/blog";
 
 const siteConfig = {
   title: 'Squadron', // Title for your website.
-  tagline: 'A testing framework for containerized services',
+  tagline: 'A testing framework for containerized and cloud services',
   url: 'https://swisslife-oss.github.io', // Your website URL
   baseUrl: '/squadron/', // Base URL for your project */
 
@@ -76,7 +76,7 @@ const siteConfig = {
   */
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `Copyright © ${new Date().getFullYear()} Swiss Life Developer`,
+  copyright: `Copyright © ${new Date().getFullYear()} Swiss Life Developers`,
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.

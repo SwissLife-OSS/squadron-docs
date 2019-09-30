@@ -102,14 +102,12 @@ class Index extends React.Component {
         className="productShowcaseSection paddingBottom"
         style={{ textAlign: "center" }}
       >
-        <h1>A framework to simplify your integration tests</h1>
+        <h1>A framework to simplify your tests</h1>
         <MarkdownBlock>
-          Squadron is a useful framework which enables you to write
-          integration tests against services without any overhead.
-          Mostly supported services are hosted in containers
-          which is managed by the framework. Other services which are not
-          supported to run in conainer are implemented as a proxy against
-          original SaaS platform.
+          Squadron is a helpful framework which enables you to write
+          tests against dependent services without any overhead.
+          Squadron can provide you isolation in tests through Container Providers
+          or support for all other services through Cloud Providers.
         </MarkdownBlock>
       </div>
     );
@@ -128,7 +126,7 @@ dotnet add package Squadron.Mongo
           },
           {
             title: "2. Use provided resource:",
-            content: `Inject the provided resource into your test class constructor and initialize your repository or service:
+            content: `Inject the provided resource into your test class constructor and initialize your repository:
 \`\`\`csharp
 public class AccountRepositoryTests
  : IClassFixture<MongoResource>
@@ -146,7 +144,7 @@ public class AccountRepositoryTests
 `
           },
           {
-            title: "3. Use repository/service in your test:",
+            title: "3. Use repository in your test:",
             content: `\`\`\`csharp
             [Fact]
             public void CreateAccount_AccountExists()
