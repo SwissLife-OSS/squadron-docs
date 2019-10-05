@@ -64,11 +64,11 @@ class HomeSplash extends React.Component {
       <SplashContainer>
         <div className="inner">
           <Logo
-            img_src={`${baseUrl}img/logo_sl_oss.svg`}
+            img_src={`${baseUrl}img/logo_sl_squadron.png`}
           />
           <ProjectTitle siteConfig={siteConfig} />
           <PromoSection>
-            <Button href={docUrl("get-started")}>Get Started</Button>
+            <Button href={docUrl("mongodb-getstarted")}>Get Started</Button>
             <Button href={docUrl("introduction")}>Learn More</Button>
           </PromoSection>
         </div>
@@ -102,14 +102,12 @@ class Index extends React.Component {
         className="productShowcaseSection paddingBottom"
         style={{ textAlign: "center" }}
       >
-        <h1>A framework to simplify your integration tests</h1>
+        <h1>A framework to simplify your tests</h1>
         <MarkdownBlock>
-          Squadron is a useful framework which enables you to write
-          integration tests against services without any overhead.
-          Mostly supported services are hosted in containers
-          which is managed by the framework. Other services which are not
-          supported to run in conainer are implemented as a proxy against
-          original SaaS platform.
+          Squadron is a helpful framework which enables you to write
+          tests against dependent services without any overhead.
+          Squadron can provide you isolation in tests through Container Providers
+          or support for all other services through Cloud Providers.
         </MarkdownBlock>
       </div>
     );
@@ -118,7 +116,7 @@ class Index extends React.Component {
       <Block layout="fourColumn" background="light" align="left">
         {[
           {
-            title: "1. Install Nuget Package:",
+            title: "1. Install",
             content: `Install the Squadron nuget package for MongoDB (or other supported service) within your test project:
 
 \`\`\`sh
@@ -127,41 +125,43 @@ dotnet add package Squadron.Mongo
 `
           },
           {
-            title: "2. Use provided resource:",
-            content: `Inject the provided resource into your test class constructor and initialize your repository or service:
+            title: "2. Access",
+            content: `Inject the MongoResources into your test class constructor:
 \`\`\`csharp
 public class AccountRepositoryTests
- : IClassFixture<MongoResource>
+    : IClassFixture<MongoResource>
 {
-    private readonly IAccountRepository _accountRepository;
+    private readonly MongoResources _mongoResource;
 
     public AccountRepositoryTests(
-        MongoResources mongoResources)
+        MongoResources mongoResource)
     {
-        var database = mongoResources.CreateDatabase();
-        _accountRepository = new AccountRepository(database);
+        _mongoResource = mongoResource;
     }
 }
 \`\`\`
 `
           },
           {
-            title: "3. Use repository/service in your test:",
-            content: `\`\`\`csharp
-            [Fact]
-            public void CreateAccount_AccountExists()
-            {
-                // arrange
-                var account = new Account();
-            
-                // act
-                var addedAccount = _accountRepository.Add(account);
-            
-                // assert
-                Snapshot.Match(addedAccount);
-            }
-            \`\`\`
-            `
+            title: "3. Use",
+            content: `In your test use MongoResources to create a database and initialize your repository:
+\`\`\`csharp
+[Fact]
+public void CreateAccount_AccountExists()
+{
+    // arrange
+    var database = _mongoResource.CreateDatabase();
+    var accountRepository = new AccountRepository(database);
+    var account = new Account();
+
+    // act
+    var addedAccount = accountRepository.Add(account);
+
+    // assert
+    Snapshot.Match(addedAccount);
+}
+\`\`\`
+`
           },
           {}]}
       </Block>
