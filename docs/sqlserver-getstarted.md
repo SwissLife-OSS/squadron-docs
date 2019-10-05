@@ -4,14 +4,14 @@ title: SQL Server - Get Started
 sidebar_label: Get Started
 ---
 
-## Install:
+## Install
 Install the Squadron nuget package for SqlServer within your test project:
 
 ```bash
 dotnet add package Squadron.SqlServer
 ```
 
-## Access:
+## Access
 Inject SqlServerResource into your test class constructor:
 
 ```csharp
@@ -28,7 +28,7 @@ public class AccountRepositoryTests
 }
 ```
 
-## Use:
+## Use
 Use SqlServerResource to create a database and initialize your repository:
 
 ```csharp

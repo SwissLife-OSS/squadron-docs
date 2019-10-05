@@ -116,7 +116,7 @@ class Index extends React.Component {
       <Block layout="fourColumn" background="light" align="left">
         {[
           {
-            title: "1. Install:",
+            title: "1. Install",
             content: `Install the Squadron nuget package for MongoDB (or other supported service) within your test project:
 
 \`\`\`sh
@@ -125,7 +125,7 @@ dotnet add package Squadron.Mongo
 `
           },
           {
-            title: "2. Access:",
+            title: "2. Access",
             content: `Inject the MongoResources into your test class constructor:
 \`\`\`csharp
 public class AccountRepositoryTests
@@ -143,7 +143,7 @@ public class AccountRepositoryTests
 `
           },
           {
-            title: "3. Use:",
+            title: "3. Use",
             content: `In your test use MongoResources to create a database and initialize your repository:
 \`\`\`csharp
 [Fact]
