@@ -4,14 +4,14 @@ title: MongoDB - Get Started
 sidebar_label: Get Started
 ---
 
-## Install:
+## Install
 Install the Squadron nuget package for MongoDB within your test project:
 
 ```bash
 dotnet add package Squadron.Mongo
 ```
 
-## Access:
+## Access
 Inject the MongoResource into your test class constructor:
 
 ```csharp
@@ -28,7 +28,7 @@ public class AccountRepositoryTests
 }
 ```
 
-## Use:
+## Use
 Use MongoResources to create a database and initialize your repository:
 
 ```csharp

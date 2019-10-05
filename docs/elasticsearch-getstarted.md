@@ -4,14 +4,14 @@ title: Elasticsearch - Get Started
 sidebar_label: Get Started
 ---
 
-## Install:
+## Install
 Install the Squadron nuget package for Elasticsearch within your test project:
 
 ```bash
 dotnet add package Squadron.Elasticsearch
 ```
 
-## Access:
+## Access
 Inject ElasticsearchResource into your test class constructor:
 
 ```csharp
@@ -28,7 +28,7 @@ public class AccountRepositoryTests
 }
 ```
 
-## Use:
+## Use
 Use ElasticsearchResource to create a database and initialize your repository:
 
 ```csharp
