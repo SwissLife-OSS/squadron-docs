@@ -68,7 +68,7 @@ body {
 
 .homeContainer {
     background-color: #353535;
-    background: url("../img/bg_motherboard.jpg") center center repeat-x;
+    background: url("../img/bg_motherboard_blue.jpg") center center repeat-x;
     color: #ffffff;
 }
 
@@ -79,7 +79,8 @@ body {
 
 .homeContainer.homeSnapshooterContainer {
     background-color: #434546;
-    background: url("../img/bg_motherboard.jpg") center center repeat-x;
+    background: url("../img/bg_motherboard_blue.jpg") center center no-repeat;
+    background-size: cover;
 }
 
 h1,
