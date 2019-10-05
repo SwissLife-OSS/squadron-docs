@@ -2,20 +2,16 @@
   "docs": {
     "Introduction": [
       "introduction",
-      "get-started",
       "basic-concept"
     ],
     "MongoDB": [
-      "mongodb-example",
-      "mongodb-api"
+      "mongodb-getstarted"
+    ],
+    "SQL Server": [
+      "sqlserver-getstarted"
     ],
     "Elasticsearch": [
-      "elasticsearch-example",
-      "elasticsearch-api"
-    ],
-    "Sql Server": [
-      "sqlserver-example",
-      "sqlserver-api"
+      "elasticsearch-getstarted"
     ]
   }
 }

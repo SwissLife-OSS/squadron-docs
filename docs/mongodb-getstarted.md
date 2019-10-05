@@ -1,6 +1,6 @@
 ---
-id: get-started
-title: Get Started
+id: mongodb-getstarted
+title: MongoDB - Get Started
 sidebar_label: Get Started
 ---
 
@@ -13,30 +13,31 @@ Install the Squadron nuget package for MongoDB (or other supported service) with
 dotnet add package Squadron.Mongo
 ```
 
-## Use provided resource:
-Inject the provided resource into your test class constructor and initialize your repository or service:
+## Inject the resource in your test class:
+Inject the provided resource into your test class constructor:
 
 ```csharp
 public class AccountRepositoryTests
  : IClassFixture<MongoResource>
 {
-    private readonly IAccountRepository _accountRepository;
+    private readonly MongoResources _mongoResources;
 
     public AccountRepositoryTests(
         MongoResources mongoResources)
     {
-        var database = mongoResources.CreateDatabase();
-        _accountRepository = new AccountRepository(database);
+        _mongoResources = mongoResources;
     }
 }
 ```
 
-## Use repository in your test:
+## Use the resource in your test:
 ```csharp
 [Fact]
 public void CreateAccount_AccountExists()
 {
     // arrange
+    var database = mongoResources.CreateDatabase();
+    _accountRepository = new AccountRepository(database);
     var account = new Account();
 
     // act
