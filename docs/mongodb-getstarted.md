@@ -12,7 +12,7 @@ dotnet add package Squadron.Mongo
 ```
 
 ## Access:
-Inject the provided resource into your test class constructor:
+Inject the MongoResource into your test class constructor:
 
 ```csharp
 public class AccountRepositoryTests
@@ -29,17 +29,19 @@ public class AccountRepositoryTests
 ```
 
 ## Use:
+Use MongoResources to create a database and initialize your repository:
+
 ```csharp
 [Fact]
 public void CreateAccount_AccountExists()
 {
     // arrange
     var database = _mongoResource.CreateDatabase();
-    _accountRepository = new AccountRepository(database);
+    var accountRepository = new AccountRepository(database);
     var account = new Account();
 
     // act
-    var addedAccount = _accountRepository.Add(account);
+    var addedAccount = accountRepository.Add(account);
 
     // assert
     Snapshot.Match(addedAccount);

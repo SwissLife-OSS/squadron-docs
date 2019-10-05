@@ -12,7 +12,7 @@ dotnet add package Squadron.SqlServer
 ```
 
 ## Access:
-Inject the provided resource into your test class constructor:
+Inject SqlServerResource into your test class constructor:
 
 ```csharp
 public class AccountRepositoryTests
@@ -29,6 +29,8 @@ public class AccountRepositoryTests
 ```
 
 ## Use:
+Use SqlServerResource to create a database and initialize your repository:
+
 ```csharp
 [Fact]
 public async Task CreateAccount_AccountExists()
@@ -36,13 +38,12 @@ public async Task CreateAccount_AccountExists()
     // arrange
     string sqlFile = Path.Combine("Resources", "CreateEmpty.sql");
     string databaseName = "Accounts";
-    var connectionString = await _sqlServerResource
-        .CreateDatabaseAsync(sqlFile, databaseName);
-    _accountRepository = new AccountRepository(connectionString);
+    var connectionString = await _sqlServerResource.CreateDatabaseAsync(sqlFile, databaseName);
+    var accountRepository = new AccountRepository(connectionString);
     var account = new Account();
 
     // act
-    var addedAccount = _accountRepository.Add(account);
+    var addedAccount = accountRepository.Add(account);
 
     // assert
     Snapshot.Match(addedAccount);
