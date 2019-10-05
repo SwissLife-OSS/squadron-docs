@@ -3,35 +3,27 @@
   "localized-strings": {
     "next": "Next",
     "previous": "Previous",
-    "tagline": "A testing framework for containerized services",
+    "tagline": "A testing framework for containerized and cloud services",
     "docs": {
       "basic-concept": {
         "title": "Basic Concept",
         "sidebar_label": "Basic Concept"
       },
-      "get-started": {
-        "title": "Get Started",
+      "elasticsearch-getstarted": {
+        "title": "Elasticsearch - Get Started",
         "sidebar_label": "Get Started"
       },
       "introduction": {
         "title": "Introduction",
         "sidebar_label": "Introduction"
       },
-      "services-elasticsearch": {
-        "title": "Elasticsearch",
-        "sidebar_label": "Elasticsearch"
+      "mongodb-getstarted": {
+        "title": "MongoDB - Get Started",
+        "sidebar_label": "Get Started"
       },
-      "services-mongo": {
-        "title": "MongoDB",
-        "sidebar_label": "MongoDB"
-      },
-      "services-overview": {
-        "title": "Overview",
-        "sidebar_label": "Overview"
-      },
-      "services-sqlserver": {
-        "title": "SqlServer",
-        "sidebar_label": "SqlServer"
+      "sqlserver-getstarted": {
+        "title": "SQL Server - Get Started",
+        "sidebar_label": "Get Started"
       }
     },
     "links": {
@@ -41,7 +33,9 @@
     },
     "categories": {
       "Introduction": "Introduction",
-      "Services": "Services"
+      "MongoDB": "MongoDB",
+      "SQL Server": "SQL Server",
+      "Elasticsearch": "Elasticsearch"
     }
   },
   "pages-strings": {

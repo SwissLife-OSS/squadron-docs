@@ -116,7 +116,7 @@ class Index extends React.Component {
       <Block layout="fourColumn" background="light" align="left">
         {[
           {
-            title: "1. Install Nuget Package:",
+            title: "1. Install:",
             content: `Install the Squadron nuget package for MongoDB (or other supported service) within your test project:
 
 \`\`\`sh
@@ -125,41 +125,43 @@ dotnet add package Squadron.Mongo
 `
           },
           {
-            title: "2. Use provided resource:",
-            content: `Inject the provided resource into your test class constructor and initialize your repository:
+            title: "2. Access:",
+            content: `Inject the MongoResources into your test class constructor:
 \`\`\`csharp
 public class AccountRepositoryTests
- : IClassFixture<MongoResource>
+    : IClassFixture<MongoResource>
 {
-    private readonly IAccountRepository _accountRepository;
+    private readonly MongoResources _mongoResources;
 
     public AccountRepositoryTests(
         MongoResources mongoResources)
     {
-        var database = mongoResources.CreateDatabase();
-        _accountRepository = new AccountRepository(database);
+        _mongoResources = mongoResources;
     }
 }
 \`\`\`
 `
           },
           {
-            title: "3. Use repository in your test:",
-            content: `\`\`\`csharp
-            [Fact]
-            public void CreateAccount_AccountExists()
-            {
-                // arrange
-                var account = new Account();
-            
-                // act
-                var addedAccount = _accountRepository.Add(account);
-            
-                // assert
-                Snapshot.Match(addedAccount);
-            }
-            \`\`\`
-            `
+            title: "3. Use:",
+            content: `In your test use MongoResources to create a database and initialize your repository:
+\`\`\`csharp
+[Fact]
+public void CreateAccount_AccountExists()
+{
+    // arrange
+    var database = mongoResources.CreateDatabase();
+    _accountRepository = new AccountRepository(database);
+    var account = new Account();
+
+    // act
+    var addedAccount = _accountRepository.Add(account);
+
+    // assert
+    Snapshot.Match(addedAccount);
+}
+\`\`\`
+`
           },
           {}]}
       </Block>
