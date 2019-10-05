@@ -16,11 +16,11 @@ This are providers for services which can run in a container. This offers full i
 ### 2. Cloud Providers
 This are providers which abstracts any cloud service. A variety of services which doesn't support containerization can be implemented as Cloud Provider.
 
+> Always use a dedicated test resource.
+
 ## Getting Started
 
 To get started, we have prepared examples for each service step by step.
-
-[Get Started](get-started.md)
 
 ## Basic Concept
 
