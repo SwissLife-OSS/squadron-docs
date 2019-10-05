@@ -30,4 +30,4 @@ A liveness probe is also implemented to be sure that the service started correct
 ## 2. Cloud Providers
 A *Resource* can also manage a cloud service if there is no container possibility.
 
-> Always use a dedicated test resource.
+> Always use dedicated test resource.

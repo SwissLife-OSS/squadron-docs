@@ -4,10 +4,8 @@ title: MongoDB - Get Started
 sidebar_label: Get Started
 ---
 
-As getting started we've prepared a simple example how to use Squadron with *MongoDB*.
-
 ## Install:
-Install the Squadron nuget package for MongoDB (or other supported service) within your test project:
+Install the Squadron nuget package for MongoDB within your test project:
 
 ```bash
 dotnet add package Squadron.Mongo
@@ -20,12 +18,12 @@ Inject the provided resource into your test class constructor:
 public class AccountRepositoryTests
     : IClassFixture<MongoResource>
 {
-    private readonly MongoResources _mongoResources;
+    private readonly MongoResource _mongoResource;
 
     public AccountRepositoryTests(
-        MongoResources mongoResources)
+        MongoResource mongoResource)
     {
-        _mongoResources = mongoResources;
+        _mongoResource = mongoResource;
     }
 }
 ```
@@ -36,7 +34,7 @@ public class AccountRepositoryTests
 public void CreateAccount_AccountExists()
 {
     // arrange
-    var database = mongoResources.CreateDatabase();
+    var database = _mongoResource.CreateDatabase();
     _accountRepository = new AccountRepository(database);
     var account = new Account();
 

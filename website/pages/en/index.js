@@ -131,12 +131,12 @@ dotnet add package Squadron.Mongo
 public class AccountRepositoryTests
     : IClassFixture<MongoResource>
 {
-    private readonly MongoResources _mongoResources;
+    private readonly MongoResources _mongoResource;
 
     public AccountRepositoryTests(
-        MongoResources mongoResources)
+        MongoResources mongoResource)
     {
-        _mongoResources = mongoResources;
+        _mongoResource = mongoResource;
     }
 }
 \`\`\`
@@ -150,7 +150,7 @@ public class AccountRepositoryTests
 public void CreateAccount_AccountExists()
 {
     // arrange
-    var database = mongoResources.CreateDatabase();
+    var database = _mongoResource.CreateDatabase();
     _accountRepository = new AccountRepository(database);
     var account = new Account();
 
