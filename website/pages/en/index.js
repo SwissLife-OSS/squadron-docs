@@ -30,10 +30,8 @@ class HomeSplash extends React.Component {
     );
 
     const Logo = props => (
-      <div className="logoPosition">
-        <div className="section logo">
-          <img src={props.img_src} alt="Project Logo" />
-        </div>
+      <div className="section logo">
+        <img src={props.img_src} alt="Project Logo" />
       </div>
     );
 
@@ -113,7 +111,7 @@ class Index extends React.Component {
     );
 
     const GetStarted = () => (
-      <Block layout="fourColumn" background="light" align="left">
+      <Block layout="fourColumn" align="left">
         {[
           {
             title: "1. Install",
