@@ -38,7 +38,7 @@ public async Task CreateAccount_AccountExists()
     // arrange
     string sqlFile = Path.Combine("Resources", "CreateEmpty.sql");
     string databaseName = "Accounts";
-    var connectionString = await _sqlServerResource.CreateDatabaseAsync(sqlFile, databaseName);
+    var connectionString = await _sqlServerResource.CreateDatabaseAsync(File.ReadAllText(sqlFile), databaseName);
     var accountRepository = new AccountRepository(connectionString);
     var account = new Account();
 
