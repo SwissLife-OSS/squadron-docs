@@ -12,6 +12,9 @@
     ],
     "Elasticsearch": [
       "elasticsearch-getstarted"
+    ],
+    "Redis": [
+      "redis-getstarted"
     ]
   }
 }

@@ -9,6 +9,10 @@
         "title": "Basic Concept",
         "sidebar_label": "Basic Concept"
       },
+      "container-options": {
+        "title": "Container Options",
+        "sidebar_label": "Container Options"
+      },
       "elasticsearch-getstarted": {
         "title": "Elasticsearch - Get Started",
         "sidebar_label": "Get Started"
