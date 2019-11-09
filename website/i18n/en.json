@@ -45,6 +45,10 @@
         "title": "MongoDB",
         "sidebar_label": "MongoDB"
       },
+      "multi": {
+        "title": "Multiple resources",
+        "sidebar_label": "Multiple resources"
+      },
       "postgresql": {
         "title": "PostgreSQL",
         "sidebar_label": "PostgreSQL"

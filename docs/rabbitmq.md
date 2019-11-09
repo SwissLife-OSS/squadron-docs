@@ -4,26 +4,20 @@ title: RabbitMQ
 sidebar_label: RabbitMQ
 ---
 
+A [RabbitMQ](https://www.rabbitmq.com/) resource using the [RabbitMQ Client](https://github.com/rabbitmq/rabbitmq-dotnet-client)
+
 ## Install
 
-Install the Squadron nuget package for [Redis](https://www.rabbitmq.com/) within your test project:
+Install the Squadron nuget package to your test project:
 
 ```bash
 dotnet add package Squadron.RabbitMQ
 ```
 
-## Access
-
-Inject the RabbitMQResource into your test class constructor:
+## Basic usage
 
 ```csharp
  //TODO
 ```
 
-## Use
-
-Use RabbitMQ:
-
-```csharp
- //TODO
-```
+More samples are available in our [samples repo](https://github.com/SwissLife-OSS/squadron/tree/master/src/samples/RabbitMQ)

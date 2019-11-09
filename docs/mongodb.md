@@ -4,11 +4,11 @@ title: MongoDB
 sidebar_label: MongoDB
 ---
 
-The Mongo resource uses a sigle node docker container.
+The [MongoDB](https://www.mongodb.com/) resource uses a sigle node docker container.
 
 ## Install
 
-Install the Squadron nuget package for [MongoDB](https://www.mongodb.com/) within your test project:
+Install the Squadron nuget package Mongo for within your test project:
 
 ```bash
 dotnet add package Squadron.Mongo
@@ -46,4 +46,27 @@ public class UserRepositoryTests : IClassFixture<MongoResource>
 }
 ```
 
-More samples are available in our [samples repo](https://github.com/SwissLife-OSS/squadron/tree/master/src/samples/mongo)
+## Create database
+
+Use `CreateDatabase()` to create a database with a random name.
+
+## Create collection from file
+
+You can create a collection from an collection exported using [mongoexport](https://docs.mongodb.com/manual/reference/program/mongoexport/)
+
+```csharp
+IMongoDatabase db = _mongoResource.CreateDatabase();
+var options = new CreateCollectionFromFileOptions
+{
+    CollectionOptions = new CreateCollectionOptions
+    {
+        CollectionName = "users"
+    },
+    File = new FileInfo("users.json")
+};
+
+IMongoCollection<User> col = await _mongoResource
+    .CreateCollectionFromFileAsync<User>(db, options);
+```
+
+More samples are available in our [samples repo](https://github.com/SwissLife-OSS/squadron/tree/master/src/samples/mongo).

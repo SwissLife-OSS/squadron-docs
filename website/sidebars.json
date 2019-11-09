@@ -5,7 +5,8 @@
       "quickstart",
       "basic-concept",
       "container-options",
-      "configuration"
+      "configuration",
+      "multi"
     ],
     "Container Providers": [
       "mongodb",
@@ -13,6 +14,7 @@
       "elasticsearch",
       "postgresql",
       "redis",
+      "rabbitmq",
       "azure-storage",
       "generic",
       "compose"
