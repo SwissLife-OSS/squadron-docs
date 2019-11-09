@@ -30,25 +30,8 @@ On the first test run the corresponding container image will be downloaded. Squa
 
 A liveness probe is also implemented to be sure that the service started correctly.
 
-The following container providers are available
-
-| Name                             | Docker image                                                                                 | Driver                                                       |
-| -------------------------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| [MongoDB](mongodb-getstarted.md) | [mongo:latest](https://hub.docker.com/_/mongo)                                               | [2.9.2](https://www.nuget.org/packages/MongoDB.Driver/2.9.0) |
-| MS SQL                           | [microsoft/mssql-server-linux:latest](https://hub.docker.com/r/microsoft/mssql-server-linux) | .NET Core                                                    |
-| PostgreSQL                       | postgres:latest                                                                              | [Npgsql 4.1.1](https://www.nuget.org/packages/Npgsql/4.1.1)  |
-| Elastic search                   | docker.elastic.co/elasticsearch/elasticsearch:6.6.0                                          | NEST 6.0.2                                                   |
-| RabbitMQ                         | rabbitmq:3                                                                                   | RabbitMQ.Client 5.1.1                                        |
-| Redis                            | redis:latest                                                                                 | StackExchange.Redis 2.0.601                                  |
-
 ## 2. Cloud Providers
 
 A _Resource_ can also manage a cloud service if there is no container possibility.
-
-The following Azure cloud resources are available
-
-| Name       | Service                                                                    | Driver                                                                   |
-| ---------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| ServiceBus | [Azure ServiceBus](https://azure.microsoft.com/en-us/services/service-bus) | [4.0.0](https://www.nuget.org/packages/Microsoft.Azure.ServiceBus/4.0.0) |
 
 > Always use dedicated test resource.

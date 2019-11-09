@@ -5,29 +5,65 @@
     "previous": "Previous",
     "tagline": "A testing framework for containerized and cloud services",
     "docs": {
+      "azure-cloud-servicebus": {
+        "title": "Azure ServiceBus",
+        "sidebar_label": "Azure ServiceBus"
+      },
+      "azure-storage": {
+        "title": "Azure Storage",
+        "sidebar_label": "Azure Storage"
+      },
       "basic-concept": {
         "title": "Basic Concept",
         "sidebar_label": "Basic Concept"
+      },
+      "compose": {
+        "title": "Compose",
+        "sidebar_label": "Compose"
+      },
+      "configuration": {
+        "title": "Configuration",
+        "sidebar_label": "Configuration"
       },
       "container-options": {
         "title": "Container Options",
         "sidebar_label": "Container Options"
       },
-      "elasticsearch-getstarted": {
-        "title": "Elasticsearch - Get Started",
-        "sidebar_label": "Get Started"
+      "elasticsearch": {
+        "title": "Elasticsearch",
+        "sidebar_label": "Elasticsearch"
+      },
+      "generic-container": {
+        "title": "Generic",
+        "sidebar_label": "Generic"
       },
       "introduction": {
         "title": "Introduction",
         "sidebar_label": "Introduction"
       },
-      "mongodb-getstarted": {
-        "title": "MongoDB - Get Started",
-        "sidebar_label": "Get Started"
+      "mongodb": {
+        "title": "MongoDB",
+        "sidebar_label": "MongoDB"
       },
-      "sqlserver-getstarted": {
-        "title": "SQL Server - Get Started",
-        "sidebar_label": "Get Started"
+      "postgresql": {
+        "title": "PostgreSQL",
+        "sidebar_label": "PostgreSQL"
+      },
+      "quickstart": {
+        "title": "Quickstart",
+        "sidebar_label": "Quickstart"
+      },
+      "rabbitmq": {
+        "title": "RabbitMQ",
+        "sidebar_label": "RabbitMQ"
+      },
+      "redis": {
+        "title": "Redis",
+        "sidebar_label": "Redis"
+      },
+      "sqlserver": {
+        "title": "SQL Server",
+        "sidebar_label": "SQL Server"
       }
     },
     "links": {
@@ -37,9 +73,8 @@
     },
     "categories": {
       "Introduction": "Introduction",
-      "MongoDB": "MongoDB",
-      "SQL Server": "SQL Server",
-      "Elasticsearch": "Elasticsearch"
+      "Container Providers": "Container Providers",
+      "Azure Cloud Providers": "Azure Cloud Providers"
     }
   },
   "pages-strings": {

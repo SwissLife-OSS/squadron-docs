@@ -61,12 +61,10 @@ class HomeSplash extends React.Component {
     return (
       <SplashContainer>
         <div className="inner">
-          <Logo
-            img_src={`${baseUrl}img/logo_sl_squadron.png`}
-          />
+          <Logo img_src={`${baseUrl}img/logo_sl_squadron.png`} />
           <ProjectTitle siteConfig={siteConfig} />
           <PromoSection>
-            <Button href={docUrl("mongodb-getstarted")}>Get Started</Button>
+            <Button href={docUrl("quickstart")}>Get Started</Button>
             <Button href={docUrl("introduction")}>Learn More</Button>
           </PromoSection>
         </div>
@@ -102,10 +100,10 @@ class Index extends React.Component {
       >
         <h1>A framework to simplify your tests</h1>
         <MarkdownBlock>
-          Squadron is a helpful framework which enables you to write
-          tests against dependent services without any overhead.
-          Squadron can provide you isolation in tests through Container Providers
-          or support for all other services through Cloud Providers.
+          Squadron is a helpful framework which enables you to write tests
+          against dependent services without any overhead. Squadron can provide
+          you isolation in tests through Container Providers or support for all
+          other services through Cloud Providers.
         </MarkdownBlock>
       </div>
     );
@@ -161,7 +159,8 @@ public void CreateAccount_AccountExists()
 \`\`\`
 `
           },
-          {}]}
+          {}
+        ]}
       </Block>
     );
 
