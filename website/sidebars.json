@@ -2,16 +2,26 @@
   "docs": {
     "Introduction": [
       "introduction",
-      "basic-concept"
+      "quickstart",
+      "basic-concept",
+      "container-options",
+      "configuration",
+      "multi"
     ],
-    "MongoDB": [
-      "mongodb-getstarted"
+    "Container Providers": [
+      "mongodb",
+      "sqlserver",
+      "elasticsearch",
+      "postgresql",
+      "redis",
+      "rabbitmq",
+      "azure-storage",
+      "generic-container",
+      "compose"
     ],
-    "SQL Server": [
-      "sqlserver-getstarted"
-    ],
-    "Elasticsearch": [
-      "elasticsearch-getstarted"
+    "Azure Cloud Providers": [
+      "azure-cloud-setup",
+      "azure-cloud-servicebus"
     ]
   }
 }

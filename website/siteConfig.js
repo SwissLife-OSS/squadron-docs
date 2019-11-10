@@ -5,44 +5,46 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-const users = [{
-  caption: 'Swiss Life',
-  image: '/img/logo_sl_squadron.png',
-  infoLink: 'https://SwissLife-OSS.github.io',
-  pinned: true,
-}, ];
+const users = [
+  {
+    caption: "Swiss Life",
+    image: "/img/logo_sl_squadron.png",
+    infoLink: "https://SwissLife-OSS.github.io",
+    pinned: true
+  }
+];
 
-
-const repoUrl = 'https://github.com/SwissLife-OSS/squadron';
-const organizationUrl = 'https://swissLife-oss.github.io';
+const repoUrl = "https://github.com/SwissLife-OSS/squadron";
+const organizationUrl = "https://swissLife-oss.github.io";
 const blogUrl = organizationUrl + "/blog";
 
 const siteConfig = {
-  title: 'Squadron', // Title for your website.
-  tagline: 'A testing framework for containerized and cloud services',
-  url: 'https://swisslife-oss.github.io', // Your website URL
-  baseUrl: '/squadron/', // Base URL for your project */
+  title: "Squadron", // Title for your website.
+  tagline: "A testing framework for containerized and cloud services",
+  url: "https://swisslife-oss.github.io", // Your website URL
+  baseUrl: "/squadron/", // Base URL for your project */
 
   // Used for publishing and more
-  projectName: 'squadron',
+  projectName: "squadron",
   realProjectName: "squadron",
-  organizationName: 'swisslife-oss',
-  organizationTitle: 'SwissLife-OSS',
+  organizationName: "swisslife-oss",
+  organizationTitle: "SwissLife-OSS",
   organizationUrl,
-  headerLinks: [{
-      doc: 'introduction',
-      href: '/docs',
-      label: 'Docs'
+  headerLinks: [
+    {
+      doc: "introduction",
+      href: "/docs",
+      label: "Docs"
     },
     {
       href: blogUrl,
       blog: true,
-      label: 'Blog',
+      label: "Blog",
       external: true
     },
     {
       href: repoUrl,
-      label: 'GitHub',
+      label: "GitHub",
       external: true
     }
   ],
@@ -51,14 +53,14 @@ const siteConfig = {
   users,
 
   /* path to images for header/footer */
-  headerIcon: 'img/logo_sl_squadron.png',
-  footerIcon: 'img/logo_sl_squadron.png',
-  favicon: 'img/favicon.png',
+  headerIcon: "img/logo_sl_squadron.png",
+  footerIcon: "img/logo_sl_squadron.png",
+  favicon: "img/favicon.png",
 
   /* Colors for website */
   colors: {
-    primaryColor: '#000000',
-    secondaryColor: '#ffffff',
+    primaryColor: "#000000",
+    secondaryColor: "#ffffff"
   },
 
   /* Custom fonts for website */
@@ -80,20 +82,20 @@ const siteConfig = {
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
-    theme: 'tomorrow-night',
+    theme: "monokai"
   },
-
+  usePrism: ["csharp"],
   // Add custom scripts here that would be placed in <script> tags.
-  scripts: ['https://buttons.github.io/buttons.js'],
+  scripts: ["https://buttons.github.io/buttons.js"],
 
   // On page navigation for the current documentation page.
-  onPageNav: 'separate',
+  onPageNav: "separate",
   // No .html extensions for paths.
   cleanUrl: true,
 
   // Open Graph and Twitter card images.
-  ogImage: 'img/logo_sl_oss.svg',
-  twitterImage: 'img/logo_sl_oss.svg',
+  ogImage: "img/logo_sl_oss.svg",
+  twitterImage: "img/logo_sl_oss.svg",
 
   // Show documentation's last contributor's name.
   enableUpdateBy: true,
@@ -104,7 +106,7 @@ const siteConfig = {
   // direct editing of docs
   editUrl: "https://github.com/SwissLife-OSS/squadron-docs/edit/master/docs/",
 
-  repoUrl,
+  repoUrl
 };
 
 module.exports = siteConfig;
