@@ -107,7 +107,7 @@ You can access all resources using the `GetResource<>()` and the registred `Name
 MongoResource mongo = _composeResource.GetResource<MongoResource>("db");
 ```
 
-## Gloval environment variables
+## Global environment variables
 
 You can define environment variables that will be exported in every container.
 
