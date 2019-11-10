@@ -7,7 +7,11 @@
     "docs": {
       "azure-cloud-servicebus": {
         "title": "Azure ServiceBus",
-        "sidebar_label": "Azure ServiceBus"
+        "sidebar_label": "ServiceBus"
+      },
+      "azure-cloud-setup": {
+        "title": "Azure setup",
+        "sidebar_label": "Setup"
       },
       "azure-storage": {
         "title": "Azure Storage",

@@ -19,6 +19,8 @@ sidebar_label: Quickstart
 | [RabbitMQ](rabbitmq.md)                       | `Squadron.RabbitMQ`             |
 | [Azure Storage](azure-storage.md)             | `Squadron.AzureStorage`         |
 | [Azure ServiceBus](azure-cloud-servicebus.md) | `Squadron.AzureCloudServiceBus` |
+| [Generic](generic-container.md)               | `Squadron.Core`                 |
+| [Compose](compose.md)                         | `Squadron.Compose`              |
 
 3. Use the resource in a `IClassFicture<>` to write you tests.
 

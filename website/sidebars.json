@@ -16,10 +16,11 @@
       "redis",
       "rabbitmq",
       "azure-storage",
-      "generic",
+      "generic-container",
       "compose"
     ],
     "Azure Cloud Providers": [
+      "azure-cloud-setup",
       "azure-cloud-servicebus"
     ]
   }
