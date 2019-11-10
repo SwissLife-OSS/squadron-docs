@@ -17,7 +17,7 @@ the estimate pricings. But for testing we should always try to use small SKU's a
 only for the time of the test run. So costs should stay very low.
 
 Squadron uses a service principal with secret to authenticate against the management api.
-To use an azure based resource you first need to create a principle and configure it for squadron.
+To use an azure based resource you first need to create a principal and configure it for squadron.
 
 1. Create a [service principal](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal)
 
