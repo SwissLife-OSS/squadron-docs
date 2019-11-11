@@ -63,7 +63,7 @@ More samples are available in our [samples repo](https://github.com/SwissLife-OS
 
 Use `CreateDatabase("myName")` to create a new database on the resource.
 
-> Note that the resource keeps the same for the defined Ficture. You may need to create a separate database for each test to not conflict with other tests
+> Note that the resource keeps the same for the defined Fixture. You may need to create a separate database for each test to not conflict with other tests
 
 ## Initialize
 

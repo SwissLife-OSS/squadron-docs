@@ -13,7 +13,7 @@ Squadron is a infrastructure framework which helps you to run tests against appl
 
 This are providers for services which can run in a container. This offers full isolation on the build server or on local machine.
 
-> Container Providers requirers Docker to be installed.
+> Container Providers requires Docker to be installed.
 
 The following container providers are available:
 

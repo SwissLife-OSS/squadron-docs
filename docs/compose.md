@@ -8,7 +8,7 @@ A compose resource can be used to write integration tests where more then one co
 In a compose resource you can also define dependencies between the resources so that
 environment variables of linked resources are injected into the container.
 You can use all container resources including the [generic resource ](generic-container.md) to
-build a test envionment.
+build a test environment.
 
 Using Docker networks is not supported a the moment but it is on the roadmap.
 
@@ -70,7 +70,7 @@ public class TodoAppOptions : ComposeResourceOptions
 }
 ```
 
-2. Use you composed app in a integration test.
+2. Use your composed app in a integration test.
 
 ```csharp
 public class TodoApplicationTests : IClassFixture<ComposeResource<TodoAppOptions>>
@@ -101,7 +101,7 @@ public class TodoApplicationTests : IClassFixture<ComposeResource<TodoAppOptions
 
 ## Access to resource
 
-You can access all resources using the `GetResource<>()` and the registred `Name`.
+You can access all resources using the `GetResource<>()` and the registered `Name`.
 
 ```csharp
 MongoResource mongo = _composeResource.GetResource<MongoResource>("db");

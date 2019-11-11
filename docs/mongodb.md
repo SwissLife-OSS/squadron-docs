@@ -4,7 +4,7 @@ title: MongoDB
 sidebar_label: MongoDB
 ---
 
-The [MongoDB](https://www.mongodb.com/) resource uses a sigle node docker container.
+The [MongoDB](https://www.mongodb.com/) resource uses a single node docker container.
 
 ## Install
 

@@ -7,7 +7,7 @@ sidebar_label: Quickstart
 1. Make sure that you have [Docker](https://docs.docker.com/docker-for-windows/)
    installed on your machine.
 
-2. Create a xUnit test project and install one of the availlable squadron packages.
+2. Create a xUnit test project and install one of the available squadron packages.
 
 | Provider                                      | Package                         |
 | --------------------------------------------- | ------------------------------- |

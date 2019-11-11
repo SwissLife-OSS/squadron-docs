@@ -9,7 +9,7 @@ to provision resources in Azure and delete them when test are completed.
 
 > Be aware that provisioning resources in Azure will cost you some \$.
 > Also it can happen that resources can not be automatically removed, in this case it is your
-> responsability to clean up unused resources. We recomend to use a dedicated resource group
+> responsibility to clean up unused resources. We recommend to use a dedicated resource group
 > to run you Squadron tests.
 
 You can use the [pricing calculator](https://azure.microsoft.com/en-us/pricing/calculator)

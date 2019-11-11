@@ -4,7 +4,7 @@ title: Azure ServiceBus
 sidebar_label: ServiceBus
 ---
 
-An [Azure ServiceBus](https://docs.microsoft.com/en-us/azure/service-bus/) resource can be used to write integrations tests against `topics` and `queues`.
+An [Azure ServiceBus](https://docs.microsoft.com/en-us/azure/service-bus/) resource can be used to write integration tests against `topics` and `queues`.
 
 You can either use an existing ServiceBus namespace in Azure or let Squadron provision a new one for every test.
 

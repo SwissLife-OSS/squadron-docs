@@ -24,7 +24,7 @@ Behind a _Resource_ can be a container or a cloud service. Those are the two con
 
 ## 1. Container Providers
 
-For a single _Resource_ it will be created only one container per test Ficture.
+For a single _Resource_ it will be created only one container per test Fixture.
 
 On the first test run the corresponding container image will be downloaded. Squadron is fully managing the life cycle of the container by creating and removing it.
 

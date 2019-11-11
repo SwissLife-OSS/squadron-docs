@@ -30,4 +30,4 @@ public class UserRespositoryTests :
 
 Using a compose resources is required in case you have dependencies between your resources.
 
-> Compose resource is only availlable for container based resources at the moment.
+> Compose resource is only available for container based resources at the moment.

@@ -6,15 +6,15 @@ sidebar_label: Configuration
 
 For basic container test no configuration is required.
 
-You'll need to provide your configutation for the
+You'll need to provide your configuration for the
 following scenarios:
 
 1. Use custom container registry which requires authentication
 2. Use an Azure Cloud resource
-3. Overide defaults
+3. Override defaults
 
 Configuration are loaded using the built in .NET Core configuration system.
-The default provider will use the resolve the configurations using the follwing order:
+The default provider will use the resolve the configurations using the following order:
 
 1. `appsettings.json`
 2. `appsettings.user.json` (Usually excluded using .gitgnore)

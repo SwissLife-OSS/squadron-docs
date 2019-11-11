@@ -5,12 +5,12 @@ sidebar_label: Container Options
 ---
 
 Default container options are always provided by to resource implementation. You can overwrite
-options by creating a new options class and overide the `configure()` method.
+options by creating a new options class and override the `configure()` method.
 
 Example to overwrite image tag for a Redis resource to use an alpine image
 
 > We have tested the containers tags using the driver version and default options.
-> When overriding these options it is your responsability to ensure that tag and driver versions are compatible.
+> When overriding these options it is your responsibility to ensure that tag and driver versions are compatible.
 
 ```csharp
 public class RedisSpecialTagOptions : RedisDefaultOptions
@@ -44,6 +44,6 @@ The following options can be configured
 | Image        | Docker image with or without tag                                                                                                                                       | mongo:4.0 |
 | Tag          | Docker image tag                                                                                                                                                       | alpine    |
 | InternalPort | Internal port inside the container                                                                                                                                     | 27017     |
-| ExternalPort | External not be defined whenever possible to avoid conflics, when no port is defined a dynamic free port will be allocated                                             | 443       |
+| ExternalPort | External not be defined whenever possible to avoid conflicts, when no port is defined a dynamic free port will be allocated                                             | 443       |
 | Registry     | The name of a docker registry which will be used to pull the container. Default is Docker Hub, custom registries must be defined in [configuration](configuration.md). | MyPrivate |
 | WaitTimeout  | The time to wait until a container is ready. Default is 30 seconds                                                                                                     | 60        |
