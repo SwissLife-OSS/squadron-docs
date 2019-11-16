@@ -45,6 +45,10 @@
         "title": "Introduction",
         "sidebar_label": "Introduction"
       },
+      "mongodb-rs": {
+        "title": "MongoDB Replica Set",
+        "sidebar_label": "MongoDB Replica Set"
+      },
       "mongodb": {
         "title": "MongoDB",
         "sidebar_label": "MongoDB"

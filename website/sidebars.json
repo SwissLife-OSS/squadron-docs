@@ -10,6 +10,7 @@
     ],
     "Container Providers": [
       "mongodb",
+      "mongodb-rs",
       "sqlserver",
       "elasticsearch",
       "postgresql",
