@@ -3,22 +3,6 @@
   margin-bottom: 0%;
 }
 
-.homeContainer .section.logo>img {
-  width: 15%;
-}
-
-@media(min-width: 480px) {
-  .homeContainer .section.logo>img {
-    width: 32%;
-  }
-}
-
-@media(min-width: 736px) {
-  .homeContainer .section.logo>img {
-    width: 32%;
-  }
-}
-
 .homeContainer .projectTitle {
   color: #fff;
 }

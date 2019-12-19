@@ -19,7 +19,7 @@ const organizationUrl = "https://swissLife-oss.github.io";
 const blogUrl = organizationUrl + "/blog";
 
 const siteConfig = {
-  title: "Squadron", // Title for your website.
+  title: "Squadron", // Title for your website. Hide with CSS due to logo type
   tagline: "A testing framework for containerized and cloud services",
   url: "https://swisslife-oss.github.io", // Your website URL
   baseUrl: "/squadron/", // Base URL for your project */
@@ -53,8 +53,8 @@ const siteConfig = {
   users,
 
   /* path to images for header/footer */
-  headerIcon: "img/logo_sl_squadron.png",
-  footerIcon: "img/logo_sl_squadron.png",
+  headerIcon: "img/logo_sl_squadron_horizontal.png",
+  footerIcon: "img/logo_sl_squadron_horizontal.png",
   favicon: "img/favicon.png",
 
   /* Colors for website */
