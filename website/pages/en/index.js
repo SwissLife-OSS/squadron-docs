@@ -22,7 +22,7 @@ class HomeSplash extends React.Component {
     const docUrl = doc => `${baseUrl}${docsPart}${langPart}${doc}`;
 
     const SplashContainer = props => (
-      <div className="homeContainer homeSnapshooterContainer">
+      <div className="homeContainer">
         <div className="homeSplashFade">
           <div className="wrapper homeWrapper">{props.children}</div>
         </div>
@@ -37,7 +37,6 @@ class HomeSplash extends React.Component {
 
     const ProjectTitle = () => (
       <h2 className="projectTitle">
-        {siteConfig.title}
         <small>{siteConfig.tagline}</small>
       </h2>
     );
@@ -52,7 +51,7 @@ class HomeSplash extends React.Component {
 
     const Button = props => (
       <div className="pluginWrapper buttonWrapper">
-        <a className="button" href={props.href} target={props.target}>
+        <a className={props.className} href={props.href} target={props.target}>
           {props.children}
         </a>
       </div>
@@ -61,11 +60,11 @@ class HomeSplash extends React.Component {
     return (
       <SplashContainer>
         <div className="inner">
-          <Logo img_src={`${baseUrl}img/logo_sl_squadron.png`} />
+          <Logo img_src={`${baseUrl}img/logo_splash_squadron.png`} />
           <ProjectTitle siteConfig={siteConfig} />
           <PromoSection>
-            <Button href={docUrl("quickstart")}>Get Started</Button>
-            <Button href={docUrl("introduction")}>Learn More</Button>
+            <Button className="button button-primary" href={docUrl("quickstart")}>Get Started</Button>
+            <Button className="button button-secondary" href={docUrl("introduction")}>Learn More</Button>
           </PromoSection>
         </div>
       </SplashContainer>

@@ -34,6 +34,7 @@ body {
 
 .fixedHeaderContainer header .headerTitleWithLogo {
     white-space: nowrap;
+    display: none;
 }
 
 .fixedHeaderContainer a,
@@ -91,7 +92,7 @@ input#search_input_react {
     text-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
 }
 
-.homeContainer.homeSnapshooterContainer {
+.homeContainer {
     background-color: #434546;
     background: url("../img/bg_motherboard_blue.jpg") center center no-repeat;
     background-size: cover;
