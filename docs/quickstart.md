@@ -11,8 +11,8 @@ sidebar_label: Quickstart
 
 | Provider                                      | Package                         |
 | --------------------------------------------- | ------------------------------- |
-| [Mongo](mongodb.md)                           | `Squadron.MongoDb`              |
-| [Mongo Replica Set](mongodb-rs.md)            | `Squadron.MongoDb`              |
+| [Mongo](mongodb.md)                           | `Squadron.Mongo`                |
+| [Mongo Replica Set](mongodb-rs.md)            | `Squadron.Mongo`                |
 | [SQL Server](sqlserver.md)                    | `Squadron.SqlServer`            |
 | [Elastic Search](elasticsearch.md)            | `Squadron.ElasticSearch`        |
 | [PostgreSQL](postgresql.md)                   | `Squadron.PostgreSql`           |
