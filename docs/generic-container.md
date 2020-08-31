@@ -105,4 +105,25 @@ public class HttpBinWebServerOptions : GenericContainerOptions
 }
 ```
 
+## Offline capability
+By default Squadron will always pull its images from either dockerhub or the configured registry. </br> 
+If you need images that are only available in your local environment or you want to execute the tests offline, you can override this behaviour with the `PreferLocal()` setting.
+
+``` csharp
+public class HttpBinWebServerOptions : GenericContainerOptions
+{
+    public override void Configure(ContainerResourceBuilder builder)
+    {
+        base.Configure(builder);
+        builder
+            .Name("backend")
+            .InternalPort(80)
+            .Image("my-local-api")
+            .PreferLocal();
+    }
+}
+```
+
+If the image is not available, Squadron will go back to the default behaviour and pull it from a registry.
+
 More samples are available in our [samples repo](https://github.com/SwissLife-OSS/squadron/tree/master/src/samples/GenericResource).

@@ -123,6 +123,7 @@ builder
 builder
     .Name("graphql")
     .InternalPort(80)
+    .ExternalPort(9090)
     .Image("mcr.microsoft.com/dotnet/core/aspnet:3.0");
     .AddNetwork("demo-network")
 ```
@@ -140,10 +141,13 @@ For more information about the exports, see next topic.
 
 ## Compose exports
 
-Every container that is built with squadron compose exports the following variables:
+Every container that is built with Squadron compose exports the following variables:
 
 `HTTPURL` --> The Url to access the container from the host </br>
+`HTTPSURL` --> Same as the first export, but HTTPS </br>
 `HTTPURL_INTERNAL` --> The Url to access the container from inside a docker network (see topic: _Access inbetween resources_)
+
+`HTTPURL` might look something like 'http://localhost:9090' in the upper example, while `HTTPURL_INTERNAL` will look more like 'http://squa_graphql_637327357326593912_a46d83475baadabd9938a281bc:80', which allows access from inside a docker network.
 
 Those exports are useful for usage in `addLink(...)`, in this way you can connect your containers with each other.
 
