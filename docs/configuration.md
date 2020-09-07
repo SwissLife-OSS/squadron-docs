@@ -61,7 +61,7 @@ You can always provide your own [configuration resolver](configuration.md#custom
 ```
 
 > To keep sensitive data outside your `appsettings.json` you can also use environment variables which
-> you then set on you build server.
+> you then set on your build server.
 
 Examples:
 

@@ -107,6 +107,54 @@ You can access all resources using the `GetResource<>()` and the registered `Nam
 MongoResource mongo = _composeResource.GetResource<MongoResource>("db");
 ```
 
+## Access inbetween resources
+
+You can connect the resources with each other by adding them to the same network. </br>
+Let's enhance our first example with that:
+```csharp
+builder
+    .Name("frontend")
+    .InternalPort(80)
+    .Image("nginx");
+    .AddNetwork("demo-network")
+
+...
+
+builder
+    .Name("graphql")
+    .InternalPort(80)
+    .ExternalPort(9090)
+    .Image("mcr.microsoft.com/dotnet/core/aspnet:3.0");
+    .AddNetwork("demo-network")
+```
+You can now add a link from the frontend to the backend by replacing the `HTTPURL` in the 
+addLink(...) with `HTTPURL_INTERNAL`. 
+
+```csharp
+builder.AddContainer<FrontEndApp>("ui")
+    .AddLink("api", new EnvironmentVariableMapping(
+        "Sample:Api:Url", "#HTTPURL_INTERNAL#"
+    ));
+```
+
+For more information about the exports, see next topic.
+
+## Compose exports
+
+Every container that is built with Squadron compose exports the following variables:
+
+`HTTPURL` --> The Url to access the container from the host </br>
+`HTTPSURL` --> Same as the first export, but HTTPS </br>
+`HTTPURL_INTERNAL` --> The Url to access the container from inside a docker network (see topic: _Access inbetween resources_)
+
+`HTTPURL` might look something like 'http://localhost:9090' in the upper example, while `HTTPURL_INTERNAL` will look more like 'http://squa_graphql_637327357326593912_a46d83475baadabd9938a281bc:80', which allows access from inside a docker network.
+
+Those exports are useful for usage in `addLink(...)`, in this way you can connect your containers with each other.
+
+In several modules of Squadron, such as Squadron.MongoDB, there can be more exports defined.
+As example in MongoDB you can access `CONNECTIONSTRING` or `CONNECTIONSTRING_INTERNAL`.
+Check the module documentation for further information!
+
 ## Global environment variables
 
 You can define environment variables that will be exported in every container.

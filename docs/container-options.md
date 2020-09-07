@@ -47,3 +47,5 @@ The following options can be configured
 | ExternalPort | External not be defined whenever possible to avoid conflicts, when no port is defined a dynamic free port will be allocated                                             | 443       |
 | Registry     | The name of a docker registry which will be used to pull the container. Default is Docker Hub, custom registries must be defined in [configuration](configuration.md). | MyPrivate |
 | WaitTimeout  | The time to wait until a container is ready. Default is 30 seconds                                                                                                     | 60        |
+| AddNetwork   | The base name of the network, of which the container should be part of (used to connect multiple containers)                                                           | demo-network |
+| PreferLocal  | This option makes sure, that Squadron will search and use local images if available, before pulling them from a registry                                               | (no params) |
