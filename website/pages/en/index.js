@@ -121,15 +121,15 @@ dotnet add package Squadron.Mongo
           },
           {
             title: "2. Access",
-            content: `Inject the MongoResources into your test class constructor:
+            content: `Inject the MongoResource into your test class constructor:
 \`\`\`csharp
 public class AccountRepositoryTests
     : IClassFixture<MongoResource>
 {
-    private readonly MongoResources _mongoResource;
+    private readonly MongoResource _mongoResource;
 
     public AccountRepositoryTests(
-        MongoResources mongoResource)
+        MongoResource mongoResource)
     {
         _mongoResource = mongoResource;
     }
@@ -139,7 +139,7 @@ public class AccountRepositoryTests
           },
           {
             title: "3. Use",
-            content: `In your test use MongoResources to create a database and initialize your repository:
+            content: `In your test use MongoResource to create a database and initialize your repository:
 \`\`\`csharp
 [Fact]
 public void CreateAccount_AccountExists()
