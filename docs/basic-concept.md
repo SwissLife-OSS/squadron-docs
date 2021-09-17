@@ -10,12 +10,12 @@ Each service provides a _Resource_ class which can be use to interact with it. U
 public class AccountRepositoryTests
     : IClassFixture<MongoResource>
 {
-    private readonly MongoResources _mongoResources;
+    private readonly MongoResource _mongoResource;
 
     public AccountRepositoryTests(
-        MongoResources mongoResources)
+        MongoResource mongoResource)
     {
-        _mongoResources = mongoResources;
+        _mongoResource = mongoResource;
     }
 }
 ```
