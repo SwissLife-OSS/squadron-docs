@@ -22,7 +22,34 @@ dotnet add package Squadron.AzureStorage
 ### Blob
 
 ```csharp
+public class MyContainerTest : IClassFixture<AzureStorageBlobResource>
+{
+    private readonly AzureStorageBlobResource _azureStorageResource;
 
+    public MyContainerTest(AzureStorageBlobResource azureStorageResource)
+    {
+        _azureStorageResource = azureStorageResource;
+    }
+    
+    [Fact]
+    public async Task CreateBlobClient_UploadFile_ContentMatch()
+    {
+        //Arrange
+        BlobServiceClient blobServiceClient = _azureStorageResource.CreateBlobServiceClient();
+        BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient("foo");
+        await containerClient.CreateIfNotExistsAsync();
+        string inputText = "Hello_AzureStorage";
+        var data = Encoding.UTF8.GetBytes(inputText);
+       
+        //Act
+        BlobClient textFile = containerClient.GetBlobClient("test.txt");
+        await textFile.UploadAsync(new BinaryData(data));
+        //Assert
+        Response<BlobDownloadResult> downloaded = await textFile.DownloadContentAsync();
+        var downloadedFileContent = Encoding.UTF8.GetString(downloaded.Value.Content.ToArray());
+        downloadedFileContent.Should().Be(inputText);
+    }
+}
 ```
 
 ### Queue
